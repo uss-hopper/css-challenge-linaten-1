@@ -5,6 +5,9 @@
 * Some rules have been included here to give you a head start.
 * Create your own custom CSS rules below. Have fun!
 ******************************************************/
+html, head {
+	align-content: center;
+}
 html, body {
 	margin: 0;
 	box-sizing: border-box;
@@ -62,5 +65,59 @@ body { width: 100%;}
 * * Attribute Selectors
 ******************************************************/
 
+html body{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+html header {
+	color: black;
+	padding: 25px;}
 
+h1 {
+	color: limegreen;
+	display: inline;
+}
+
+em {
+	color: limegreen;
+	display: inline;
+}
+header div.container{
+	align-content: center;
+	background-color: black;
+}
+img.welcome{
+	align-content: center;
+			  }
+.instructions-wrapper{
+	display: flex;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	border:5px;
+	border-color: black;
+	border-style: solid;
+	min-height: 10em;}
+table{
+	width: 100%;
+	border: .50px solid white;
+	color: lime;}
+th, td{
+	background-color: black;
+	padding:12px;
+	text-align: left;
+}
+h2{
+	text-align: left;
+}
+.about-me{
+	display: flex;
+	align-content: center;
+	background-color: blue;
+}
+
+.form-wrapper{
+	display: table-row;}
+img{
+display: inline-block}
 

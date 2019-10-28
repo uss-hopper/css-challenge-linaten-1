@@ -1,0 +1,190 @@
+/*****************************************************
+* CSS Mockup Activity - Custom CSS Stylesheet
+* @author rlewis37
+*
+* Some rules have been included here to give you a head start.
+* Create your own custom CSS rules below. Have fun!
+******************************************************/
+html, head {
+	align-content: center;
+}
+html, body {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* create a responsive container */
+@media only screen and (min-width: 1200px) {
+	.container { width: 1170px; }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.container { width: 970px; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.container { width: 750px; }
+}
+
+/*****************************************************
+* Flexbox Sticky Footer
+* http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+******************************************************/
+
+/*corrects IE min-height bug*/
+html { display: flex;}
+body { width: 100%;}
+
+.sfooter {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.sfooter-content {
+	flex: 1 0 auto;
+}
+
+/*****************************************************
+* ADD YOUR OWN CSS BELOW! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+*
+* HINT: You might want to be conversant with the following:
+* * Shorthand syntax for padding, margin, and borders
+* * Display property and values... and the differences between them.
+* * The Box Model
+* * Pseudo Classes
+* * Attribute Selectors
+******************************************************/
+/***
+Global styles - will style the whole sheet. Text is the same through the whole thing, so it is best to start with the text for the whole document. The first, monospace, is what we want, but the one in "" which is courier new, will be the default if we cannot find that specific text
+ */
+body {
+	font-family: monospace, "Courier New";
+
+}
+/*** to style the specific section, see below. Padding is a trial and error game - keep inputting numbers until it looks right. You can also do dev tools in the webpage itself- you can make changes in the inspect page section and it will temporarily change it so you see what it will look like.
+ */
+section {
+	padding: 2.75rem 0;
+}
+/*** header styles. You can use color picker on the webpage inspection window to hover over a color and it will show you what the color is so you can duplicate that color in your php storm. When you type in just "color" under the header bracket, it changes the color of the text. To make the text appear in a line, you can make it an inline block element.
+
+ */
+header{
+	background-color: #333;
+	color: lime;
+}
+/***
+rem will reflect off root element (reflects off the whole project - it is the global style), but em will only reflect on one specific thing like a header. Below, the margin will effect the while page.
+ */
+header h1{
+	display: inline-block;
+	margin-right: 2rem;
+}
+/***
+welcome styles. to style a specific image, use the alt tag.
+ */
+img[alt="welcome to my homepage"]{
+	display: block;
+	margin: 0 auto 2rem;
+}
+.instructions-wrapper{
+	display:flex;
+	align-items: flex-start;
+	border: 3px solid black;
+	padding: 20px;
+}
+/***
+to make an image smaller in a container, use something similar to below.
+ */
+.instructions-wrapper img{
+	width: 250px;
+}
+/*** to change the font, for instance the size, use below. The padding below is putting space between the text and the image.
+ */
+.instructions-content{
+	flex: 1;
+	padding-right: 2rem;
+}
+.instructions-content h2{
+	margin-top: 0;
+}
+/***
+easiest way to get the image and the text to line up in a row
+ */
+section.about-me{
+	background-color: blue;
+	color: white;
+}
+
+.about-me img{
+	width: 300px;
+	float: left;
+	margin-right: 2rem;
+	border: 3px solid white;
+
+}
+/***
+to change the color in the section - see what it is tagged, call that tag, and use it to style it. For example, this one is called the "span". You can find this in the index or the inspection page,
+ */
+.about-me p span{
+	color: yellow;
+	font-style: italic;
+}
+/***
+skills styles (example being used). nth-child is - when you are calling the "nth child" anything in that group of children will be effected. We are choosing nth-child(4) below here because it is going from the root of that branch and then we specify which child, and which object which in this section is h2
+ */
+section:nth-child(4) h2 {
+	text-align: right;
+	margin-top: 0;
+}
+/***
+making it 100% as seen below makes the table fit the whole screen.
+ */
+section:nth-child(4) table{
+	width: 100%;
+	color: lime;
+}
+section:nth-child(4) table td,
+section:nth-child(4) table th{
+	background-color: #333333;
+	padding: 10px;
+}
+/***
+styling the bottom part - we are calling the last child because we are starting from the div, then the class (sfooter-content) and then we are telling it to find the last child in that class.
+ */
+div.sfooter-content section:last-child {
+	background-color: #333;
+}
+.form-wrapper{
+	background-color: darkgreen;
+	color: lime;
+	padding: 20px;
+}
+label{
+	display: block;
+	margin: 15px 0 5px 0;
+}
+input, textarea{
+	width:30%;
+	padding:8px;
+	border: none;
+	padding: 10px 30px;
+	font-size: 1rem;
+}
+footer{
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+
